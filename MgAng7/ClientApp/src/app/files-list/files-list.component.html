@@ -1,0 +1,14 @@
+<p>
+    Files list
+</p>
+
+<ul class="list-group">
+    <li *ngFor="let file of files"
+        [class.active]="file === selectedFile"
+        (click)="onSelect(file)"
+        class="list-group-item">
+        {{file.id}}{{file.title}}
+    </li>
+</ul>
+
+<app-file-detail [file]="selectedFile"></app-file-detail>

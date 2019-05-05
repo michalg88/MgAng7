@@ -1,0 +1,16 @@
+<div *ngIf="file">
+
+    <h2>{{file.title | uppercase}} Details</h2>
+    <div><span>id: </span>{{file.id}}</div>
+    <div>
+        <label>
+            fileName:
+            <input [(ngModel)]="file.fileNme" placeholder="fileName" class="form-control" />
+        </label><br />
+        <label>
+            description:
+            <textarea [(ngModel)]="file.description" class="form-control"></textarea>
+        </label><br />
+    </div>
+    description: {{file.description}}
+</div>
